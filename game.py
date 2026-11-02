@@ -1,6 +1,6 @@
 import random
 
-choices = ["rock", "paper", "scissors"]
+choices = ["rock", "paper", "scissors", "lizard", "spock"]
 computer = random.choice(choices)
 print(f"The computer chose: {computer}")
 player_score = 0
@@ -11,14 +11,15 @@ while player_score < 3 and computer_score < 3:
     print(f"You chose: {player}")
 
     beats = {
-        "rock": "scissors",
-        "paper": "rock",
-        "scissors": "paper"
+       "rock": ["scissors", "lizard"], 
+       "paper": ["rock", "spock"], 
+       "scissors": ["paper", "lizard"], 
+       "lizard": ["spock", "paper"], 
+       "spock": ["scissors", "rock"], 
     }
-
     if player == computer:
         print("Draw!")
-    elif beats[player] == computer:
+    elif computer in beats[player]:
         print("You win!")
         player_score += 1
     else:
