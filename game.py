@@ -24,10 +24,12 @@ while player_score < 3 and computer_score < 3:
     else:
         print("You lose!")
         computer_score += 1
-    print(f"Score: You {player_score} - {compter_score} Computer")
+    print(f"Score: You {player_score} - {computer_score} Computer")
     print()
 
 if player_score == 3:
     print("YOU WIN THE GANE!")
 else: 
     print("The compter wins the game!")
+
+
