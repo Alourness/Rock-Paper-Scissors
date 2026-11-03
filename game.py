@@ -16,6 +16,9 @@ while player_score < 3 and computer_score < 3:
        "lizard": ["spock", "paper"], 
        "spock": ["scissors", "rock"], 
     }
+    if player not in choices:
+       print("Invalid choice. Try again.")
+       continue
     if player == computer:
         print("Draw!")
     elif computer in beats[player]:
@@ -28,8 +31,8 @@ while player_score < 3 and computer_score < 3:
     print()
 
 if player_score == 3:
-    print("YOU WIN THE GANE!")
+    print("YOU WIN THE GAME!")
 else: 
-    print("The compter wins the game!")
+    print("The computer wins the game!")
 
 
