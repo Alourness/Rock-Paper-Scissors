@@ -2,14 +2,13 @@ import random
 
 choices = ["rock", "paper", "scissors", "lizard", "spock"]
 computer = random.choice(choices)
-print(f"The computer chose: {computer}")
 player_score = 0
 computer_score = 0
 
 while player_score < 3 and computer_score < 3:
-    player = input("Enter your choice (rock, paper, scissors): ").lower().strip()
+    player = input("Enter your choice (rock, paper, scissors, lizard, spock): ").lower().strip()
     print(f"You chose: {player}")
-
+    print(f"The computer chose: {computer}")
     beats = {
        "rock": ["scissors", "lizard"], 
        "paper": ["rock", "spock"], 
